@@ -11,10 +11,10 @@ const E = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3')
 const E2 = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3')
 
 const A = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3')
-const A2 = new Audio('https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3')
+const A2 = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3')
 const S = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3')
 const S2 = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3')
-const D = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3')
+const D = new Audio('https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3')
 const D2 = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3')
 
 const Z = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3')
@@ -29,133 +29,210 @@ class DrumMachine extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pressed: false
+      view: ""      
     }
-    this.onSwitch = this.onSwitch.bind(this);
+    
+    
     this.onKey = this.onKey.bind(this);
+    this.qKey = this.qKey.bind(this);
+    this.wKey = this.wKey.bind(this)
+    this.eKey = this.eKey.bind(this)
+    this.aKey = this.aKey.bind(this)
+    this.sKey = this.sKey.bind(this)
+    this.dKey = this.dKey.bind(this)
+    this.zKey = this.zKey.bind(this)
+    this.xKey = this.xKey.bind(this)
+    this.cKey = this.cKey.bind(this)
+    
+    
   }
-  
+
   componentDidMount() {
-    document.addEventListener("keydown", this.onKey)
+    document.addEventListener("keydown", this.onKey);
+    document.getElementById("qCont").addEventListener('click', this.qKey)
+    document.getElementById("wCont").addEventListener('click', this.wKey)
+    document.getElementById("eCont").addEventListener('click', this.eKey)
+    document.getElementById("aCont").addEventListener('click', this.aKey)
+    document.getElementById("sCont").addEventListener('click', this.sKey)
+    document.getElementById("dCont").addEventListener('click', this.dKey)
+    document.getElementById("zCont").addEventListener('click', this.zKey)
+    document.getElementById("xCont").addEventListener('click', this.xKey)
+    document.getElementById("cCont").addEventListener('click', this.cKey)
   }
 
   componentWillUnmount() {
     document.removeEventListener("keydown", this.onKey)
+    document.getElementById("qCont").addEventListener('click', this.qKey)
+    document.getElementById("wCont").addEventListener('click', this.wKey)
+    document.getElementById("eCont").addEventListener('click', this.eKey)
+    document.getElementById("aCont").addEventListener('click', this.aKey)
+    document.getElementById("sCont").addEventListener('click', this.sKey)
+    document.getElementById("dCont").addEventListener('click', this.dKey)
+    document.getElementById("zCont").addEventListener('click', this.zKey)
+    document.getElementById("xCont").addEventListener('click', this.xKey)
+    document.getElementById("cCont").addEventListener('click', this.cKey)
+  }
+
+  
+  
+
+  onKey(event) {
+    switch (event.keyCode) {
+      default: 
+        break;
+      case 81: 
+        this.qKey();
+        break;
+      case 87:
+          this.wKey()
+          break;
+      case 69:
+          this.eKey()
+          break;
+      case 65:
+          this.aKey()
+          break;
+      case 83:
+          this.sKey();
+          break;
+      case 68: 
+          this.dKey();
+          break;
+      case 90:
+          this.zKey();        
+          break;
+      case 88:
+          this.xKey();
+          break;
+      case 67:
+          this.cKey();
+          break;  
+    }
+  }
+
+  qKey(event) {
+    document.getElementById('Q').play()
+    this.setState({
+      view: "Groove"
+    })
+  }
+  wKey() {
+    document.getElementById('W').play()
+    this.setState({
+      view: "Move"
+    })
+  }
+
+  eKey() {
+    document.getElementById('E').play()
+    this.setState({
+      view: "Clap"
+    })
+  }
+
+  aKey() {
+    document.getElementById('A').play()
+    this.setState({
+      view: "Cymbal"
+    })
   }
   
 
-  onSwitch() {
-    if (this.state.pressed === false) {
-    return  this.setState({
-        pressed: true
-      })
-    } else {
-      return this.setState({
-        pressed: false
-      })
-    }
-
-
-
+  sKey() {
+    document.getElementById('S').play()
+    this.setState({
+      view: "Tip"
+    })
   }
 
-  onKey(event) {
-    if (this.state.pressed === false) {
-    switch (event.keyCode) {
-      case 81: 
-        Q.play();
-        break;
-      case 87:
-        W.play(); 
-        break;
-      case 69:
-        E.play();
-        break;
-      case 65:
-        A.play();
-        break;
-      case 83:
-        S.play();
-        break;
-      case 68: 
-        D.play();
-        break;
-      case 90:
-        Z.play();        
-        break;
-      case 88:
-        X.play();
-        break;
-      case 67:
-        C.play();
-        break;    
-      default: 
-    }
-  } else {
-    switch (event.keyCode) {
-      case 81: 
-        Q2.play();
-        break;
-      case 87:
-        W2.play(); 
-        break;
-      case 69:
-        E2.play();
-        break;
-      case 65:
-        A2.play();
-        break;
-      case 83:
-        S2.play();
-        break;
-      case 68: 
-        D2.play();
-        break;
-      case 90:
-        Z2.play();        
-        break;
-      case 88:
-        X2.play();
-        break;
-      case 67:
-        C2.play();
-        break;    
-      default: 
-    }
-
-  } 
-    
-    
+  dKey() {
+    document.getElementById('D').play()
+    this.setState({
+      view:"Tap"
+    })
   }
+
+  zKey() {
+    document.getElementById('Z').play()
+    this.setState({
+      view: "Skitter"
+    })
+  }
+ 
+  xKey() {
+    document.getElementById('X').play()
+    this.setState({
+      view: "Cuff"
+    })
+  }
+
+  cKey() {
+    document.getElementById('C').play()
+    this.setState({
+      view: "Zap"
+    })
+  }
+
+
+
+ 
+  
+
+  
+ 
+    
+  
   render() {
     return (
       <div className="container-fluid">
         <div id="drum-machine">
           <div className="row">
             
-          <div id="display"></div>
+          <div id="display">{this.state.view}</div>
           </div>
           <div className="row">
-            <button className="drum-pad col-xs-3 btn btn-primary" id="Q">X</button>
-            <div className="drum-pad col-xs-3" id="W" onClick={W.play()}>x</div>
-            <div className="drum-pad col-xs-3" id="E" onClick={E.play()}>x</div>
+            <button className="drum-pad col-xs-3 btn btn-dark" id="qCont">Q
+              <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="Q" />
+              
+            </button>
+            
+            <button className="drum-pad col-xs-3 btn btn-info" id="wCont">W
+              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3' className="clip" id="W" />
+            
+
+            </button>
+            <button className="drum-pad col-xs-3 btn btn-dark" id="eCont">E
+              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3' className='clip' id='E' />
+            </button>
           </div>
           <div className="row">
-            <div className="drum-pad col-xs-3" id="A" onClick={A.play}>x</div>
-            <div className="drum-pad col-xs-3" id="S" onClick={S.play}>x</div>
-            <div className="drum-pad col-xs-3" id="D" onClick={D.play}>x</div>
+            <button className="drum-pad col-xs-3 btn btn-info" id="aCont">A
+              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3' className='clip' id='A' />
+              </button>
+            <button className="drum-pad col-xs-3 btn btn-dark" id="sCont">S
+              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3' className='clip' id='S' />
+            </button>
+            <button className="drum-pad col-xs-3 btn btn-info" id="dCont">D
+              <audio src='https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3' className='clip' id="D" />
+            </button>
           </div>
           <div className="row">
-            <div className="drum-pad col-xs-3" id="Z" onClick={Z.play}>x</div>
-            <div className="drum-pad col-xs-3" id="X" onClick={X.play}>x</div>
-            <div className="drum-pad col-xs-3" id="C" onClick={C.play}>x</div>
+            <button className="drum-pad col-xs-3 btn btn-dark" id="zCont">Z
+              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3' className='clip' id='Z' />
+            </button>
+            <button className="drum-pad col-xs-3 btn btn-info" id="xCont">X
+              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3' className='clip' id='X' />
+            </button>
+            <button className="drum-pad col-xs-3 btn btn-dark" id="cCont">C
+              <audio src='https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3' className="clip" id='C' />
+            </button>
           </div>
           <div className="row">
-          <button id="switch" className="btn btn-light" onClick={this.onSwitch}>Click Here</button>
+          
           </div>
         </div>
 
-
+      <h3 id='foot'>Designed by Lei Corre &hearts;</h3>
 
       </div>
     )
