@@ -52,3 +52,19 @@
   font-size: 30px;
 }
 
+
+#ab {
+  background-color: rgb(97, 208, 228);
+  font-family: elect;
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 3%;
+  
+}
+
+
+
+.buttons {
+  margin-left: 5%;
+  margin-right: 5%;
+}
