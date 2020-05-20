@@ -9,13 +9,13 @@ class DrumMachine extends React.Component {
     super(props);
     this.state = {
       view: "",
-      flip: true,
-      side: "Side A"      
+     /* flip: true,
+      side: "Side A"  */    
     }
     
     
     this.onKey = this.onKey.bind(this);
-    this.onSwitch = this.onSwitch.bind(this);
+  // this.onSwitch = this.onSwitch.bind(this);
     this.qKey = this.qKey.bind(this);
     this.wKey = this.wKey.bind(this)
     this.eKey = this.eKey.bind(this)
@@ -93,156 +93,157 @@ class DrumMachine extends React.Component {
   }
 
   onSwitch(event) {
-    if (this.state.flip===true) {
+   // if (this.state.flip===true) {
         this.setState({
           flip: false,
           side: "Side B"
           
         }) 
         
-      } else {
+  /*    } else {
        
          this.setState({
            flip: true,
            siide: "Side A"
-         }) }
+         }) } */
     
   }
 
   qKey(event) {
-    if (this.state.flip===true) {
+   // if (this.state.flip===true) {
     
     document.getElementById('Q').play()
     this.setState({
       view: "Groove"
-      }) } else {
+      })
+    /* } else {
     
     document.getElementById('Q2').play()
     this.setState({
       view: "Piano Chord A"
     })    
-  }
+  } */
   }
 
   wKey() {
-    if (this.state.flip===true) {
+  //  if (this.state.flip===true) {
     document.getElementById('W').play()
     this.setState({
       view: "Move"
     })
-  } else {
+/*  } else {
     
     document.getElementById('W2').play()
     this.setState({
       view: "Piano Chord B"
     })    
-  }
+  } */
   }
 
   eKey() {
-    if (this.state.flip===true) {
+    //if (this.state.flip===true) {
     document.getElementById('E').play()
     this.setState({
       view: "Clap"
     })
-  } else {
+ /* } else {
     
     document.getElementById('E2').play()
     this.setState({
       view: "Piano Chord C"
     })    
-  }
+  } */
   }
 
   aKey() {
-    if (this.state.flip===true) {
+   // if (this.state.flip===true) {
     document.getElementById('A').play()
     this.setState({
       view: "Cymbal"
     })
-  } else {
+  /* } else {
     
     document.getElementById('A2').play()
     this.setState({
       view: "Tisk"
     })    
-  }
+  } */
   }
   
 
   sKey() {
-    if (this.state.flip===true) {
+    //if (this.state.flip===true) {
     document.getElementById('S').play()
     this.setState({
       view: "Tip"
     })
-  } else {
+  /*} else {
     
     document.getElementById('S2').play()
     this.setState({
       view: "Bop"
     })    
-  }
+  }*/
   }
 
   dKey() {
-    if (this.state.flip===true) {
+    //if (this.state.flip===true) {
     document.getElementById('D').play()
     this.setState({
       view:"Tap"
     })
-  } else {
+  /*} else {
     
     document.getElementById('D2').play()
     this.setState({
       view: "Fwaap"
     })    
-  }
+  } */
   }
 
   zKey() {
-    if (this.state.flip===true) {
+   // if (this.state.flip===true) {
     document.getElementById('Z').play()
     this.setState({
       view: "Skitter"
     })
-  } else {
+  /*} else {
     
     document.getElementById('Z2').play()
     this.setState({
       view: "Doo"
     })    
-  }
+  } */
   }
  
   xKey() {
-    if (this.state.flip===true) {
+   // if (this.state.flip===true) {
     document.getElementById('X').play()
     this.setState({
       view: "Cuff"
     })
-  } else {
+ /* } else {
     
     document.getElementById('X2').play()
     this.setState({
       view: "Roll"
     })    
-  }
+  } */
   }
 
   cKey() {
-    if (this.state.flip===true) {
+   // if (this.state.flip===true) {
     document.getElementById('C').play()
     this.setState({
       view: "Zap"
     })
-  } else {
+ /*} else {
     
     document.getElementById('C2').play()
     this.setState({
       view: "Bip"
     })    
-  }
+  }*/
   }
  
     
@@ -300,11 +301,11 @@ class DrumMachine extends React.Component {
               <audio src='https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3' className="clip2" id='C2' />
             </button>
           </div>
-          <div className="row"> 
+         {/* <div className="row"> 
           <button className="btn btn-light sideButton col-xs-2 buttons" >On/Off</button>  
           <button className="btn btn-warning sideButton col-xs-2 buttons" onClick={this.onSwitch}>2nd Func</button>
            <span className="col-xs-2 buttons" id="ab">{this.state.side}</span>
-          </div>
+          </div> */}
         </div>
 
       <h3 id='foot'>Designed by Lei Corre &hearts;</h3>
