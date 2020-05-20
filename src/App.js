@@ -206,8 +206,6 @@ class DrumMachine extends React.Component {
 
       <h3 id='foot'>Designed by Lei Corre &hearts;</h3>
 
-      <div className="circles1"/>
-
       </div>
     )
   }
