@@ -3,27 +3,6 @@ import ReactDOM from 'react-dom'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-const Q = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3')
-const Q2 = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3')
-const W = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3')
-const W2 = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3')
-const E = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3')
-const E2 = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3')
-
-const A = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3')
-const A2 = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3')
-const S = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3')
-const S2 = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3')
-const D = new Audio('https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3')
-const D2 = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3')
-
-const Z = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3')
-const Z2 = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3')
-const X = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3')
-const X2 = new Audio('https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3')
-const C = new Audio('https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3')
-const C2 = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3')
-
 
 class DrumMachine extends React.Component {
   constructor(props) {
