@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class DrumMachine extends React.Component {
@@ -151,13 +151,6 @@ class DrumMachine extends React.Component {
       view: "Zap"
     })
   }
-
-
-
- 
-  
-
-  
  
     
   
@@ -212,6 +205,8 @@ class DrumMachine extends React.Component {
         </div>
 
       <h3 id='foot'>Designed by Lei Corre &hearts;</h3>
+
+      <div className="circles1"/>
 
       </div>
     )
