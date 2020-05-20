@@ -258,46 +258,46 @@ class DrumMachine extends React.Component {
           <div className="row">
             <button className="drum-pad col-xs-3 btn btn-dark" id="qCont">Q
               <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="Q" />
-              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3' className="clip" id='Q2' />
+              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3' className="clip2" id='Q2' />
               
             </button>
             
             <button className="drum-pad col-xs-3 btn btn-info" id="wCont">W
               <audio src='https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3' className="clip" id="W" />
-              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3' className="clip" id='W2' />
+              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3' className="clip2" id='W2' />
 
             </button>
             <button className="drum-pad col-xs-3 btn btn-dark" id="eCont">E
               <audio src='https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3' className='clip' id='E' />
-              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3' className="clip" id='E2' />
+              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3' className="clip2" id='E2' />
             </button>
           </div>
           <div className="row">
             <button className="drum-pad col-xs-3 btn btn-info" id="aCont">A
               <audio src='https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3' className='clip' id='A' />
-              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3' className="clip" id='A2' />
+              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3' className="clip2" id='A2' />
               </button>
             <button className="drum-pad col-xs-3 btn btn-dark" id="sCont">S
               <audio src='https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3' className='clip' id='S' />
-              <audio src='https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3' className="clip" id='S2' />
+              <audio src='https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3' className="clip2" id='S2' />
             </button>
             <button className="drum-pad col-xs-3 btn btn-info" id="dCont">D
               <audio src='https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3' className='clip' id="D" />
-              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3' className="clip" id='D2' />
+              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3' className="clip2" id='D2' />
             </button>
           </div>
           <div className="row">
             <button className="drum-pad col-xs-3 btn btn-dark" id="zCont">Z
               <audio src='https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3' className='clip' id='Z' />
-              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3' className="clip" id='Z2' />
+              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3' className="clip2" id='Z2' />
             </button>
             <button className="drum-pad col-xs-3 btn btn-info" id="xCont">X
               <audio src='https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3' className='clip' id='X' />
-              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3' className="clip" id='X2' />
+              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3' className="clip2" id='X2' />
             </button>
             <button className="drum-pad col-xs-3 btn btn-dark" id="cCont">C
               <audio src='https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3' className="clip" id='C' />
-              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3' className="clip" id='C2' />
+              <audio src='https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3' className="clip2" id='C2' />
             </button>
           </div>
           <div className="row"> 
